@@ -1,9 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-import Test from './pages/test';
-import First from './component/first';
+import logo from "./logo.svg";
+import "./App.css";
+import Test from "./pages/test";
+import First from "./component/first";
+import Firstform from "./component/form";
+import Test1 from "./pages/test1";
+import Realform from "./pages/realform";
+import { useState } from "react";
 
-function App() {
+const App = () => {
+  const [userName, setUserName] = useState();
+  console.log(userName, " username from App");
+  const handleGetDataFromLocalStorage = () => {
+    const name = localStorage.getItem("password");
+    setUserName(name);
+  };
   return (
     <div className="App">
       {/* <header className="App-header">
@@ -21,9 +31,15 @@ function App() {
         </a>
       </header> */}
       {/* <Test /> */}
-      <First />
+      {/* <First /> */}
+      {/* <Firstform /> */}
+      <Test1 />
+      {/* <Realform /> */}
+      <button onClick={handleGetDataFromLocalStorage}>
+        get data from local
+      </button>
     </div>
   );
-}
+};
 
 export default App;

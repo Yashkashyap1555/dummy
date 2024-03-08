@@ -11,6 +11,7 @@ const First = () => {
     return(
         <div>
        <h2>Hello</h2>
+       <h1>monu bhaiya</h1>
        {data}
        {/* <div>
        <button onClick={count}>click me</button>  
